@@ -6,6 +6,7 @@ const outputDiv = document.querySelector("#output");
 const body = document.querySelector("#body");
 
 outputDiv.style.display = "none";
+body.classList.remove("sad");
 
 function calculateProfit(purchase, quantity, current) {
   let profit = ((current - purchase) * quantity).toFixed(2);
@@ -27,9 +28,10 @@ function calculateLoss(purchase, quantity, current) {
 
 function checkHandler(e) {
   e.preventDefault();
-  let purchasePriceInput = purchasePrice.value;
-  let quantityInput = quantity.value;
-  let currentPriceInput = currentPrice.value;
+  body.classList.remove("sad");
+  let purchasePriceInput = Number(purchasePrice.value);
+  let quantityInput = Number(quantity.value);
+  let currentPriceInput = Number(currentPrice.value);
 
   if (purchasePriceInput > 0 && quantityInput > 0 && currentPriceInput > 0) {
     if (purchasePriceInput < currentPriceInput) {
@@ -38,7 +40,8 @@ function checkHandler(e) {
       calculateLoss(purchasePriceInput, quantityInput, currentPriceInput);
     }
   } else {
-    console.log("Values must be greater than 0.");
+    outputDiv.innerText = "Values must be greater than 0.";
+    outputDiv.style.display = "block";
   }
 }
 

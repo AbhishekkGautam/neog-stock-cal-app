@@ -17,7 +17,7 @@ body {
 .container {
   width: 40%;
   margin: auto;
-  margin-top: 4rem;
+  margin-top: 3.5rem;
 }
 
 h1,
@@ -73,6 +73,10 @@ button:hover {
 
 .sad {
   background-color: #171717;
+  color: white;
+}
+
+.sad h1 {
   color: white;
 }
 
