@@ -4,15 +4,21 @@ const currentPrice = document.querySelector("#current-price");
 const form = document.querySelector("#form");
 const outputDiv = document.querySelector("#output");
 const body = document.querySelector("#body");
+const lottie = document.querySelector("#lottie");
 
 outputDiv.style.display = "none";
 body.classList.remove("sad");
+lottie.style.display = "none";
 
 function calculateProfit(purchase, quantity, current) {
   let profit = ((current - purchase) * quantity).toFixed(2);
   let profitPercentage = Math.trunc(((current - purchase) * 100) / purchase);
   outputDiv.innerText = `You gained ${profitPercentage}%. Your total profit is ₹${profit}  🎉`;
   outputDiv.style.display = "block";
+
+  if (profitPercentage > 50) {
+    lottie.style.display = "block";
+  }
 }
 
 function calculateLoss(purchase, quantity, current) {
@@ -29,6 +35,7 @@ function calculateLoss(purchase, quantity, current) {
 function checkHandler(e) {
   e.preventDefault();
   body.classList.remove("sad");
+  lottie.style.display = "none";
   let purchasePriceInput = Number(purchasePrice.value);
   let quantityInput = Number(quantity.value);
   let currentPriceInput = Number(currentPrice.value);
