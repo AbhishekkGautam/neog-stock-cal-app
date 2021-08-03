@@ -4,14 +4,14 @@
   --primary-color: #2563eb;
   --secondary-color: #3b82f6;
   --dark-gray: #6b7280;
-  --light-blue: #eff6ff;
+  --white: #f7fbfb;
   --dark-blue: #1e3a8a;
 }
 
 body {
   font-family: "DM Sans", sans-serif;
   margin: 0px;
-  background-color: var(--light-blue);
+  background-color: var(--white);
 }
 
 .container {
@@ -25,25 +25,29 @@ p {
   text-align: center;
 }
 
+h1 {
+  color: #3730a3;
+}
+
 form {
   display: flex;
   flex-direction: column;
   width: 55%;
   margin: auto;
-  margin-top: 2.5rem;
+  margin-top: 4rem;
 }
 
 input {
   margin-bottom: 1rem;
-  padding: 0.5rem;
-  margin-top: 0.3rem;
+  padding: 0.6rem;
+  margin-top: 0.4rem;
   font-family: "DM Sans", sans-serif;
 }
 
 button {
-  margin-top: 1.5rem;
+  margin-top: 1.3rem;
   padding: 0.6rem 1.5rem;
-  background-color: var(--primary-color);
+  background: linear-gradient(to right, #3e7bff, #5b54fa);
   color: white;
   border: none;
   border-radius: 0.3rem;
@@ -52,19 +56,56 @@ button {
 }
 
 button:hover {
-  background-color: var(--secondary-color);
+  background: linear-gradient(to right, #3e7bff, #3e7bff);
 }
 
 #output {
   background-color: white;
   padding: 1rem;
   margin: auto;
-  margin-top: 3rem;
-  width: 60%;
-  min-height: 4rem;
+  margin-top: 4rem;
+  width: 65%;
+  height: auto;
+  text-align: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-@media only screen and (max-width: 1200px) {
+.sad {
+  background-color: #171717;
+  color: white;
+}
+
+.sad #output {
+  color: black;
+}
+
+.sad button {
+  background: #262626;
+}
+
+.footer {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.list-non-bullet {
+  list-style: none;
+}
+.list-item-inline {
+  display: inline;
+  padding: 0rem 0.8rem;
+}
+
+.footer ul {
+  padding-inline-start: 0px;
+}
+
+.footer a {
+  color: dodgerblue;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
   .container {
     width: 50%;
     margin-top: 4rem;
@@ -77,10 +118,11 @@ button:hover {
   }
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 600px) {
   .container {
     width: 90%;
     margin-top: 3rem;
+    margin-bottom: 3rem;
   }
   form {
     width: 90%;
@@ -88,6 +130,8 @@ button:hover {
   }
   #output {
     width: 80%;
+    text-align: center;
+    line-height: 1.8rem;
   }
   button {
     margin-top: 1rem;

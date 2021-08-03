@@ -7,22 +7,51 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Stock-Profit/Loss Calculator</title>
 	<link rel="stylesheet" href="./styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body id="body">
 	<div class="container">
 		<h1>Stock Mark</h1>
 		<p>Calculate how much profit or loss you are making on your stocks.</p>
 		<form id="form">
 			<label for="purchase-price">Purchase Price</label>
-			<input type="number" required id="purchase-price" placeholder="enter purchase stock price">
+			<input type="number" required step=".01" id="purchase-price" placeholder="Enter purchase stock price">
 			<label for="stock-quantity">Stock Quantity</label>
-			<input type="number" required id="stock-quantity" placeholder="enter stock quantity">
+			<input type="number" required id="stock-quantity" placeholder="Enter stock quantity">
 			<label for="current-price">Current Price</label>
-			<input type="number" required id="current-price" placeholder="enter current price of stock">
+			<input type="number" required step=".01" id="current-price" placeholder="Enter current price of stock">
 			<button id="check-button" type="submit">Check</button>
 		</form>
 		<div id="output"></div>
+		<div class="footer">
+			<p>
+				Developed by
+				<a href="https://abhishekkgautam.netlify.app" target="_blank" rel="noreferrer">
+					Abhishek Gautam
+				</a>
+			</p>
+			<ul class="social-links list-non-bullet">
+				<li class="list-item-inline">
+					<a target="_blank" class="link" href="https://github.com/AbhishekkGautam" rel="noreferrer">
+						<i class="fab fa-github fa-1x"></i>
+					</a>
+				</li>
+				<li class="list-item-inline">
+					<a target="_blank" class="link" href="https://twitter.com/helloAbhishekk" rel="noreferrer">
+						<i class="fab fa-twitter fa-1x"></i>
+					</a>
+				</li>
+				<li class="list-item-inline">
+					<a target="_blank" class="link" href="https://www.linkedin.com/in/abhishek-gautam-54684a167/"
+						rel="noreferrer">
+						<i class="fab fa-linkedin-in fa-1x"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
 	</div>
 	<script src="./app.js"></script>
 </body>
