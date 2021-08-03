@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stock-Profit/Loss Calculator</title>
+	<link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Stock Mark</h1>
+		<p>Calculate how much profit or loss you are making on your stocks.</p>
+		<form id="form">
+			<label for="purchase-price">Purchase Price</label>
+			<input type="number" required id="purchase-price" placeholder="enter purchase stock price">
+			<label for="stock-quantity">Stock Quantity</label>
+			<input type="number" required id="stock-quantity" placeholder="enter stock quantity">
+			<label for="current-price">Current Price</label>
+			<input type="number" required id="current-price" placeholder="enter current price of stock">
+			<button id="check-button" type="submit">Check</button>
+		</form>
+		<div id="output"></div>
+	</div>
+	<script src="./app.js"></script>
+</body>
+
+</html>
