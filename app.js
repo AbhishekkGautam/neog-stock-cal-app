@@ -43,8 +43,11 @@ function checkHandler(e) {
   if (purchasePriceInput > 0 && quantityInput > 0 && currentPriceInput > 0) {
     if (purchasePriceInput < currentPriceInput) {
       calculateProfit(purchasePriceInput, quantityInput, currentPriceInput);
-    } else {
+    } else if (purchasePriceInput > currentPriceInput) {
       calculateLoss(purchasePriceInput, quantityInput, currentPriceInput);
+    } else {
+      outputDiv.innerText = "No profit and no loss. ";
+      outputDiv.style.display = "block";
     }
   } else {
     outputDiv.innerText = "Values must be greater than 0.";
